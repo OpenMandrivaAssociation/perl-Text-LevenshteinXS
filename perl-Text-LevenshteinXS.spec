@@ -1,6 +1,6 @@
 %define module   Text-LevenshteinXS
 %define version    0.03
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{module}
 Version:    %{version}
@@ -15,7 +15,13 @@ BuildRequires: perl(Test)
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
-no description found
+This module implements the Levenshtein edit distance in a XS way.
+
+The Levenshtein edit distance is a measure of the degree of proximity between
+two strings. This distance is the number of substitutions, deletions or
+insertions ("edits") needed to transform one string into the other one (and
+vice versa). When two strings have distance 0, they are the same. A good point
+to start is: <http://www.merriampark.com/ld.htm>
 
 %prep
 %setup -q -n %{module}-%{version} 
