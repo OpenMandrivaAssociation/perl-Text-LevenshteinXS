@@ -47,3 +47,30 @@ rm -rf %buildroot
 %{_mandir}/man3/*
 %perl_vendorarch/Text
 %perl_vendorarch/auto/Text
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.30.0-3
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Tue Jul 20 2010 Jérôme Quelin <jquelin@mandriva.org> 0.30.0-2mdv2011.0
++ Revision: 556174
+- rebuild for perl 5.12
+
+* Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.30.0-1mdv2010.0
++ Revision: 405711
+- rebuild using %%perl_convert_version
+
+* Wed Nov 12 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.03-2mdv2009.1
++ Revision: 302525
+- fix description
+
+* Wed Nov 12 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.03-1mdv2009.1
++ Revision: 302514
+- import perl-Text-LevenshteinXS
+
+
+* Wed Nov 12 2008 cpan2dist 0.03-1mdv
+- initial mdv release, generated with cpan2dist
+
