@@ -1,15 +1,13 @@
 %define upstream_name    Text-LevenshteinXS
-%define upstream_version 0.03
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	6
+Version:    0.03
+Release:	7
 
 Summary:    An XS implementation of the Levenshtein edit distance
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/dist/Text-LevenshteinXS
-Source0:    https://cpan.metacpan.org/authors/id/J/JG/JGOLDBERG/Text-LevenshteinXS-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/J/JG/JGOLDBERG/Text-LevenshteinXS-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl-devel
@@ -26,7 +24,7 @@ vice versa). When two strings have distance 0, they are the same. A good point
 to start is: <http://www.merriampark.com/ld.htm>
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -61,9 +59,7 @@ rm -rf %buildroot
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.30.0-1mdv2010.0
 + Revision: 405711
-- rebuild using %%perl_convert_version
-
-* Wed Nov 12 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.03-2mdv2009.1
+- rebuild using %0.03 Wed Nov 12 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.03-2mdv2009.1
 + Revision: 302525
 - fix description
 
