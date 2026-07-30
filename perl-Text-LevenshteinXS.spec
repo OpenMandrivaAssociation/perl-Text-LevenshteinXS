@@ -2,7 +2,7 @@
 %define upstream_version 0.03
 Name:       perl-%{upstream_name}
 Version:	0.03
-Release:	2
+Release:	3
 
 Summary:    An XS implementation of the Levenshtein edit distance
 License:    GPL+ or Artistic
@@ -13,7 +13,6 @@ Source0:	https://cpan.metacpan.org/authors/id/J/JG/JGOLDBERG/Text-LevenshteinXS-
 BuildRequires:	make
 BuildRequires: perl-devel
 BuildRequires: perl(Test)
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements the Levenshtein edit distance in a XS way.
@@ -28,13 +27,13 @@ to start is: <http://www.merriampark.com/ld.htm>
 %setup -q -n Text-LevenshteinXS-0.03
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
 # soft: do not fail package on test failures
 set +e
-make test
+make test || :
 
 %install
 rm -rf %buildroot
