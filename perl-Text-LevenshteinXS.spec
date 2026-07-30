@@ -1,13 +1,14 @@
 %define upstream_name    Text-LevenshteinXS
+%define upstream_version 0.03
 Name:       perl-%{upstream_name}
-Version:    0.03
-Release:	7
+Version:	0.03
+Release:	1
 
 Summary:    An XS implementation of the Levenshtein edit distance
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/dist/Text-LevenshteinXS
-Source0:    https://cpan.metacpan.org/authors/id/J/JG/JGOLDBERG/Text-LevenshteinXS-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/J/JG/JGOLDBERG/Text-LevenshteinXS-0.03.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl-devel
@@ -47,27 +48,4 @@ rm -rf %buildroot
 %perl_vendorarch/Text
 %perl_vendorarch/auto/Text
 
-
-%changelog
-* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.30.0-3
-+ Revision: 768358
-- svn commit -m mass rebuild of perl extension against perl 5.14.2
-
-* Tue Jul 20 2010 Jérôme Quelin <jquelin@mandriva.org> 0.30.0-2mdv2011.0
-+ Revision: 556174
-- rebuild for perl 5.12
-
-* Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.30.0-1mdv2010.0
-+ Revision: 405711
-- rebuild using %0.03 Wed Nov 12 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.03-2mdv2009.1
-+ Revision: 302525
-- fix description
-
-* Wed Nov 12 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.03-1mdv2009.1
-+ Revision: 302514
-- import perl-Text-LevenshteinXS
-
-
-* Wed Nov 12 2008 cpan2dist 0.03-1mdv
-- initial mdv release, generated with cpan2dist
 
