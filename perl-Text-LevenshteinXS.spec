@@ -2,7 +2,7 @@
 %define upstream_version 0.03
 Name:       perl-%{upstream_name}
 Version:	0.03
-Release:	4
+Release:	5
 
 Summary:    An XS implementation of the Levenshtein edit distance
 License:    GPL+ or Artistic
